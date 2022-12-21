@@ -1,14 +1,20 @@
-function val(result) {
-    form.disp.value = form.disp.value + result;
+// this function will show the  value in the display
+
+function calculator(NewValue) {
+    document.getElementById("disp").value += NewValue;
 }
-function calculate() {
-    if (form.disp.value == "") {
-        alert("Please inter the Numbers")
-    }else{
-        form.disp.value = eval(form.disp.value);
-    }
+
+// this function willl clear the display
+
+function DeleteMe() {
+    document.getElementById("disp").value =  "";
 }
-let btn = form.veql;
-btn.addEventListener('dblclick', function () {
-    form.disp.value = "";
-})
+
+
+// this function will show our result
+
+function Answere() {
+    let a = document.getElementById("disp").value ;
+    let b = eval(a);
+    document.getElementById("disp").value = b;
+}
